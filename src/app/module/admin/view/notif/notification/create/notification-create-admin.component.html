@@ -1,0 +1,48 @@
+        <p-dialog [(visible)]="createDialog" [style]="{width: '70vw'}" header="{{'notification.tabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+            <ng-template pTemplate="content" >
+                        <p-tabView>
+                            <p-tabPanel header="{{'notification.tabPan' | translate}}">
+                                <div class="grid">
+
+                                            <div class="field col-12  md:col-6">
+                                                <label>Utilisateur</label>
+                                                <p-multiSelect [options]="notificationDetails" [(ngModel)]="item.notificationDetails" itemSize="30" [virtualScroll]="true"
+                                                                                                                          defaultLabel="Select un utilisateur" optionLabel="utilisateur.id"  display="chip"></p-multiSelect>
+                                            </div>
+                                                <div class="field col-12 md:col-6">
+                                                    <label for="2">{{'notification.contenue' | translate}}</label>
+                                                    <input class="mb-2 mr-2" type="text" pInputText  placeholder="{{'notification.contenue' | translate}}" id="2" [(ngModel)]="item.contenue"
+                                                             />
+                                                    
+                                                </div>
+
+
+
+                                                <div class="field col-12 md:col-6">
+                                                    <label for="3">{{'notification.dateEnvoi' | translate}}</label>
+                                                    <p-calendar appendTo="body" id="3"  [showTime]="true" [showSeconds]="false" placeholder="{{'notification.dateEnvoi' | translate}}"  [(ngModel)]="item.dateEnvoi"
+                                                            dateFormat="{{dateFormat}}"  >
+                                                    </p-calendar>
+                                                    
+                                                </div>
+
+                                </div>
+                            </p-tabPanel>
+
+                        </p-tabView>
+
+            </ng-template>
+
+            <ng-template pTemplate="footer" >
+                <div class="p-flexbox">
+
+                            <button pButton pRipple  label="{{'validate' | translate}}"  icon="pi pi-check"  (click)="save()"></button>
+
+
+                            <button pButton pRipple  label="{{'cancel' | translate}}" icon="pi pi-times" class="p-button-outlined" (click)="hideCreateDialog()"></button>
+
+
+                </div>
+            </ng-template>
+
+    </p-dialog>

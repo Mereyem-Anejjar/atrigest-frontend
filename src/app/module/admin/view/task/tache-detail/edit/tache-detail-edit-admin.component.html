@@ -1,0 +1,57 @@
+    <p-dialog [(visible)]="editDialog" [style]="{width: '70vw'}" header="{{'tacheDetail.tabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+        <ng-template pTemplate="content" >
+                <p-tabView>
+                    <p-tabPanel header="{{'tacheDetail.tabPan' | translate}}">
+                        <div class="grid">
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="1">{{'tacheDetail.description' | translate}}</label>
+                                            <textarea id="1" pInputTextarea rows="5" cols="30" placeholder="{{'tacheDetail.description' | translate}}"  [(ngModel)]="item.description"
+                                                       ></textarea>
+                                            
+                                        </div>
+
+                                    <div class="field col-11 md:col-6">
+                                        <label for="2">{{'tacheDetail.utilisateur' | translate}}</label>
+                                        <p-dropdown  appendTo="body"  [options]="utilisateurs" [(ngModel)]="item.utilisateur" id="2" [filter]="true" filterMatchMode="contains"
+                                                     [showClear]="true" optionLabel="id" placeholder="{{'tacheDetail.utilisateur' | translate}}"  >
+                                        </p-dropdown>
+                                        
+                                    </div>
+
+                                    <div class="field col-11 md:col-6">
+                                        <label for="3">{{'tacheDetail.etatAvancement' | translate}}</label>
+                                        <p-dropdown  appendTo="body"  [options]="etatAvancements" [(ngModel)]="item.etatAvancement" id="3" [filter]="true" filterMatchMode="contains"
+                                                     [showClear]="true" optionLabel="code" placeholder="{{'tacheDetail.etatAvancement' | translate}}"  >
+                                        </p-dropdown>
+                                        
+                                    </div>
+
+                                    <div class="field col-11 md:col-6">
+                                        <label for="4">{{'tacheDetail.tache' | translate}}</label>
+                                        <p-dropdown  appendTo="body"  [options]="taches" [(ngModel)]="item.tache" id="4" [filter]="true" filterMatchMode="contains"
+                                                     [showClear]="true" optionLabel="id" placeholder="{{'tacheDetail.tache' | translate}}"  >
+                                        </p-dropdown>
+                                        
+                                    </div>
+
+                        </div>
+                    </p-tabPanel>
+
+                </p-tabView>
+
+        </ng-template>
+
+        <ng-template pTemplate="footer" >
+            <div class="p-flexbox">
+
+                    <button pButton pRipple  label="{{'validate' | translate}}"  icon="pi pi-check"  (click)="edit()"></button>
+
+
+                        <button pButton pRipple  label="{{'cancel' | translate}}" icon="pi pi-times" class="p-button-outlined" (click)="hideEditDialog()"></button>
+
+
+            </div>
+        </ng-template>
+
+    </p-dialog>

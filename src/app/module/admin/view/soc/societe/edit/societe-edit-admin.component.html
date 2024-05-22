@@ -1,0 +1,137 @@
+    <p-dialog [(visible)]="editDialog" [style]="{width: '70vw'}" header="{{'societe.tabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+        <ng-template pTemplate="content" >
+                <p-tabView>
+                    <p-tabPanel header="{{'societe.tabPan' | translate}}">
+                        <div class="grid">
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="1">{{'societe.nom' | translate}}<span style="color: red;">*</span></label>
+                                            <input class="mb-2 mr-2" type="text" pInputText  placeholder="{{'societe.nom' | translate}}" id="1" [(ngModel)]="item.nom"
+                                                   [ngClass]="{'ng-invalid ng-dirty' : !validSocieteNom}"  />
+                                            <small class='p-error' *ngIf='!validSocieteNom'>Nom est obligatoire.</small>
+                                        </div>
+
+
+
+                                    <div class="field col-11 md:col-6">
+                                        <label for="2">{{'societe.type' | translate}}</label>
+                                        <p-dropdown  appendTo="body"  [options]="types" [(ngModel)]="item.type" id="2" [filter]="true" filterMatchMode="contains"
+                                                     [showClear]="true" optionLabel="code" placeholder="{{'societe.type' | translate}}"  >
+                                        </p-dropdown>
+                                        
+                                    </div>
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="3">{{'societe.dateCreation' | translate}}</label>
+                                            <p-calendar appendTo="body" id="3"  [showTime]="true" [showSeconds]="false" placeholder="{{'societe.dateCreation' | translate}}"  [(ngModel)]="item.dateCreation"
+                                                        dateFormat="{{dateFormat}}"  >
+                                            </p-calendar>
+                                            
+                                        </div>
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="4">{{'societe.rc' | translate}}</label>
+                                            <input class="mb-2 mr-2" type="text" pInputText  placeholder="{{'societe.rc' | translate}}" id="4" [(ngModel)]="item.rc"
+                                                    />
+                                            
+                                        </div>
+
+
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="5">{{'societe.taxeProfessionnelle' | translate}}</label>
+                                            <input class="mb-2 mr-2" type="text" pInputText  placeholder="{{'societe.taxeProfessionnelle' | translate}}" id="5" [(ngModel)]="item.taxeProfessionnelle"
+                                                    />
+                                            
+                                        </div>
+
+
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="6">{{'societe.ice' | translate}}</label>
+                                            <input class="mb-2 mr-2" type="text" pInputText  placeholder="{{'societe.ice' | translate}}" id="6" [(ngModel)]="item.ice"
+                                                    />
+                                            
+                                        </div>
+
+
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="7">{{'societe.gerant' | translate}}</label>
+                                            <input class="mb-2 mr-2" type="text" pInputText  placeholder="{{'societe.gerant' | translate}}" id="7" [(ngModel)]="item.gerant"
+                                                    />
+                                            
+                                        </div>
+
+
+
+                        </div>
+                    </p-tabPanel>
+                            <p-tabPanel header="{{'societe.associes' | translate}}">
+                                        <div class="p-col">
+                                            <div class="grid">
+                                                            <div class="field col-12 md:col-6">
+                                                                <label for="1">Nom<span style="color: red;">*</span></label>
+                                                                <input class="mb-2 mr-2" type="text" pInputText placeholder="Nom"
+                                                                       id="1" [(ngModel)]="associesElement.nom" autofocus  [ngClass]="{'ng-invalid ng-dirty' : !validAssociesNom}"  >
+                                                                <small class='p-error' *ngIf='!validAssociesNom'>Nom est obligatoire.</small>
+                                                            </div>
+                                                            <div class="field col-11 md:col-6">
+                                                                <label>Role associe</label>
+                                                                <p-dropdown  appendTo="body"  [options]="roleAssocies" [(ngModel)]="associesElement.roleAssocie"
+                                                                             id="3"  [filter]="true" filterMatchMode="contains" [showClear]="true" optionLabel="code"
+                                                                             placeholder="Role associe"  >
+                                                                </p-dropdown>
+                                                                
+                                                            </div>
+
+                                                <div class="field col-12 md:col-1">
+                                                    <button pButton pRipple type="button" icon="pi pi-plus" class="mt-4" label="OK" (click)="addAssocies()"></button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="p-col">
+                                            <div class="card">
+                                                <p-table [value]="item.associes" [scrollable]="true" scrollHeight="200px">
+                                                    <ng-template pTemplate="header">
+                                                        <tr>
+                                                                        <th>Nom</th>
+                                                                        <th>Role associe</th>
+                                                            <th>Actions</th>
+                                                        </tr>
+                                                    </ng-template>
+                                                    <ng-template pTemplate="body" let-p>
+                                                        <tr>
+                                                                        <td>{{p.nom}}</td>
+                                                                    <td>{{p.roleAssocie?.code}}</td>
+                                                            <td>
+                                                                <button (click)="deleteAssocies(p)" pButton type="button" icon="pi pi-times"  class="p-button-rounded p-button-danger"></button>
+                                                                <button (click)="editAssocies(p)" pButton type="button" icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2"></button>
+                                                            </td>
+                                                        </tr>
+                                                    </ng-template>
+                                                </p-table>
+                                            </div>
+
+                                        </div>
+                            </p-tabPanel>
+
+
+                </p-tabView>
+
+        </ng-template>
+
+        <ng-template pTemplate="footer" >
+            <div class="p-flexbox">
+
+                    <button pButton pRipple  label="{{'validate' | translate}}"  icon="pi pi-check"  (click)="edit()"></button>
+
+
+                        <button pButton pRipple  label="{{'cancel' | translate}}" icon="pi pi-times" class="p-button-outlined" (click)="hideEditDialog()"></button>
+
+
+            </div>
+        </ng-template>
+
+    </p-dialog>

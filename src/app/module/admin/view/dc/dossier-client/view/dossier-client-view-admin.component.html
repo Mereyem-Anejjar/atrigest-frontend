@@ -1,0 +1,72 @@
+
+<p-dialog [(visible)]="viewDialog" [style]="{width: '70vw'}" header="{{'dossierClient.tabPan' | translate}}" [modal]="true" styleClass="p-fluid">
+    <ng-template pTemplate="content">
+        <p-tabView>
+            <p-tabPanel header="{{'dossierClient.tabPan' | translate}}">
+                <div class="grid">
+                    <div class="field col-12 md:col-6">
+                        <label for="1">{{'dossierClient.nom' | translate}}</label>
+                        <input class="mb-2 mr-2" type="text" pInputText [disabled]="true" placeholder="{{'dossierClient.nom' | translate}}" autofocus  id="1" [ngModel]="item.nom">
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="2">{{'dossierClient.adresse' | translate}}</label>
+                        <input class="mb-2 mr-2" type="text" pInputText [disabled]="true" placeholder="{{'dossierClient.adresse' | translate}}" autofocus  id="2" [ngModel]="item.adresse">
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="3">{{'dossierClient.nationalite' | translate}}</label>
+                        <input class="mb-2 mr-2" type="text" pInputText [disabled]="true" placeholder="{{'dossierClient.nationalite' | translate}}" autofocus  id="3" [ngModel]="item.nationalite?.code">
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="4">{{'dossierClient.typeIdentite' | translate}}</label>
+                        <input class="mb-2 mr-2" type="text" pInputText [disabled]="true" placeholder="{{'dossierClient.typeIdentite' | translate}}" autofocus  id="4" [ngModel]="item.typeIdentite?.code">
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="5">{{'dossierClient.numeroIdentite' | translate}}</label>
+                        <input class="mb-2 mr-2" type="text" pInputText [disabled]="true" placeholder="{{'dossierClient.numeroIdentite' | translate}}" autofocus  id="5" [ngModel]="item.numeroIdentite">
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="6">{{'dossierClient.raisonSociale' | translate}}</label>
+                        <input class="mb-2 mr-2" type="text" pInputText [disabled]="true" placeholder="{{'dossierClient.raisonSociale' | translate}}" autofocus  id="6" [ngModel]="item.raisonSociale">
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="7">{{'dossierClient.identifiantCommun' | translate}}</label>
+                        <input class="mb-2 mr-2" type="text" pInputText [disabled]="true" placeholder="{{'dossierClient.identifiantCommun' | translate}}" autofocus  id="7" [ngModel]="item.identifiantCommun">
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="8">{{'dossierClient.registreCommerce' | translate}}</label>
+                        <input class="mb-2 mr-2" type="text" pInputText [disabled]="true" placeholder="{{'dossierClient.registreCommerce' | translate}}" autofocus  id="8" [ngModel]="item.registreCommerce">
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="9">{{'dossierClient.taxeProfessionnelle' | translate}}</label>
+                        <input class="mb-2 mr-2" type="text" pInputText [disabled]="true" placeholder="{{'dossierClient.taxeProfessionnelle' | translate}}" autofocus  id="9" [ngModel]="item.taxeProfessionnelle">
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="10">{{'dossierClient.cnss' | translate}}</label>
+                        <input class="mb-2 mr-2" type="text" pInputText [disabled]="true" placeholder="{{'dossierClient.cnss' | translate}}" autofocus  id="10" [ngModel]="item.cnss">
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="11">{{'dossierClient.banqueAdherente' | translate}}</label>
+                        <input class="mb-2 mr-2" type="text" pInputText [disabled]="true" placeholder="{{'dossierClient.banqueAdherente' | translate}}" autofocus  id="11" [ngModel]="item.banqueAdherente?.code">
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <label for="12">{{'dossierClient.groupeSociete' | translate}}</label>
+                        <input class="mb-2 mr-2" type="text" pInputText [disabled]="true" placeholder="{{'dossierClient.groupeSociete' | translate}}" autofocus  id="12" [ngModel]="item.groupeSociete">
+                    </div>
+                </div>
+            </p-tabPanel>
+
+        </p-tabView>
+
+    </ng-template>
+
+    <ng-template pTemplate="footer" >
+        <div class="p-flexbox">
+            <div>
+                <button pButton pRipple label="Annuler" icon="pi pi-times" class="p-button-outlined" (click)="hideViewDialog()"></button>
+            </div>
+        </div>
+    </ng-template>
+</p-dialog>
+
+
+

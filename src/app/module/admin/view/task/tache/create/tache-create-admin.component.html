@@ -1,0 +1,131 @@
+        <p-dialog [(visible)]="createDialog" [style]="{width: '70vw'}" header="{{'tache.tabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+            <ng-template pTemplate="content" >
+                        <p-tabView>
+                            <p-tabPanel header="{{'tache.tabPan' | translate}}">
+                                <div class="grid">
+
+                                                <div class="field col-12 md:col-6">
+                                                    <label for="1">{{'tache.description' | translate}}</label>
+                                                    <textarea id="1" pInputTextarea rows="5" cols="30" placeholder="{{'tache.description' | translate}}"  [(ngModel)]="item.description"
+                                                             ></textarea>
+                                                    
+                                                </div>
+
+                                                <div class="field col-12 md:col-6">
+                                                    <label for="2">{{'tache.dateLimite' | translate}}</label>
+                                                    <p-calendar appendTo="body" id="2"  [showTime]="true" [showSeconds]="false" placeholder="{{'tache.dateLimite' | translate}}"  [(ngModel)]="item.dateLimite"
+                                                            dateFormat="{{dateFormat}}"  >
+                                                    </p-calendar>
+                                                    
+                                                </div>
+
+                                            <div class="field col-11 md:col-6">
+                                                <label for="3">{{'tache.priorite' | translate}}</label>
+                                                <p-dropdown  appendTo="body"  [options]="priorites" [(ngModel)]="item.priorite" id="3" [filter]="true" filterMatchMode="contains"
+                                                        [showClear]="true" optionLabel="code" placeholder="{{'tache.priorite' | translate}}"  >
+                                                </p-dropdown>
+                                                
+                                            </div>
+
+                                            <div class="field col-11 md:col-6">
+                                                <label for="4">{{'tache.etatAvancement' | translate}}</label>
+                                                <p-dropdown  appendTo="body"  [options]="etatAvancements" [(ngModel)]="item.etatAvancement" id="4" [filter]="true" filterMatchMode="contains"
+                                                        [showClear]="true" optionLabel="code" placeholder="{{'tache.etatAvancement' | translate}}"  >
+                                                </p-dropdown>
+                                                
+                                            </div>
+
+                                            <div class="field col-11 md:col-6">
+                                                <label for="5">{{'tache.dossierClient' | translate}}</label>
+                                                <p-dropdown  appendTo="body"  [options]="dossierClients" [(ngModel)]="item.dossierClient" id="5" [filter]="true" filterMatchMode="contains"
+                                                        [showClear]="true" optionLabel="nom" placeholder="{{'tache.dossierClient' | translate}}"  >
+                                                </p-dropdown>
+                                                
+                                            </div>
+
+                                            <div class="field col-12  md:col-6">
+                                                <label>Entite externe</label>
+                                                <p-multiSelect [options]="tacheEntiteExternes" [(ngModel)]="item.tacheEntiteExternes" itemSize="30" [virtualScroll]="true"
+                                                                                                                          defaultLabel="Select un entiteExterne" optionLabel="entiteExterne.nom"  display="chip"></p-multiSelect>
+                                            </div>
+                                </div>
+                            </p-tabPanel>
+                                    <p-tabPanel header="{{'tache.tacheDetails' | translate}}">
+                                                <div class="p-col">
+                                                    <div class="grid">
+                                                                    <div class="field col-12 md:col-6">
+                                                                        <label for="1">{{'tacheDetail.description' | translate}}</label>
+                                                                        <textarea id="1" pInputTextarea rows="5" cols="30" placeholder="{{'tacheDetail.description' | translate}}"  [(ngModel)]="item.description"
+                                                                                 ></textarea>
+                                                                        
+                                                                    </div>
+                                                                    <div class="field col-11 md:col-6">
+                                                                        <label>Utilisateur</label>
+                                                                        <p-dropdown  appendTo="body"  [options]="utilisateurs" [(ngModel)]="tacheDetailsElement.utilisateur"
+                                                                                     id="2"  [filter]="true" filterMatchMode="contains" [showClear]="true" optionLabel="id"
+                                                                                     placeholder="Utilisateur"  >
+                                                                        </p-dropdown>
+                                                                        
+                                                                    </div>
+
+                                                                    <div class="field col-11 md:col-6">
+                                                                        <label>Etat avancement</label>
+                                                                        <p-dropdown  appendTo="body"  [options]="etatAvancements" [(ngModel)]="tacheDetailsElement.etatAvancement"
+                                                                                     id="3"  [filter]="true" filterMatchMode="contains" [showClear]="true" optionLabel="code"
+                                                                                     placeholder="Etat avancement"  >
+                                                                        </p-dropdown>
+                                                                        
+                                                                    </div>
+
+                                                        <div class="field col-12 md:col-1">
+                                                            <button pButton pRipple type="button" icon="pi pi-plus" class="mt-4" label="OK" (click)="addTacheDetails()"></button>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="p-col">
+                                                    <div class="card">
+                                                        <p-table [value]="item.tacheDetails" [scrollable]="true" scrollHeight="200px">
+                                                            <ng-template pTemplate="header">
+                                                                <tr>
+                                                                                <th>Description</th>
+                                                                                <th>Utilisateur</th>
+                                                                                <th>Etat avancement</th>
+                                                                    <th>Actions</th>
+                                                                </tr>
+                                                            </ng-template>
+                                                            <ng-template pTemplate="body" let-p>
+                                                                <tr>
+                                                                                <td>{{p.description}}</td>
+                                                                            <td>{{p.utilisateur?.id}}</td>
+                                                                            <td>{{p.etatAvancement?.code}}</td>
+                                                                    <td>
+                                                                        <button (click)="deleteTacheDetails(p)" pButton type="button" icon="pi pi-times"  class="p-button-rounded p-button-danger"></button>
+                                                                        <button (click)="editTacheDetails(p)" pButton type="button" icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2"></button>
+                                                                    </td>
+                                                                </tr>
+                                                            </ng-template>
+                                                        </p-table>
+                                                    </div>
+
+                                                </div>
+                                    </p-tabPanel>
+
+
+                        </p-tabView>
+
+            </ng-template>
+
+            <ng-template pTemplate="footer" >
+                <div class="p-flexbox">
+
+                            <button pButton pRipple  label="{{'validate' | translate}}"  icon="pi pi-check"  (click)="save()"></button>
+
+
+                            <button pButton pRipple  label="{{'cancel' | translate}}" icon="pi pi-times" class="p-button-outlined" (click)="hideCreateDialog()"></button>
+
+
+                </div>
+            </ng-template>
+
+    </p-dialog>

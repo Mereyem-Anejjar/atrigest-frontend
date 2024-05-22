@@ -1,0 +1,383 @@
+{
+    "from-to": "Elements from {first} to {last} (total {totalRecords})",
+    "new" : "Nouveau",
+    "search": "Chercher",
+    "export": "Exporter",
+    "import": "Importer",
+    "validate": "Validater",
+    "search": "Chercher...",
+    "delete": "Supprimer",
+    "cancel": "Annuler",
+    "save": "Sauvgarder",
+    "next": "Suivant",
+    "yes": "Oui",
+    "no": "Non",
+    "actions": "Actions",
+    "confirm": "Confirmer",
+    "creation": "Creation",
+    "list": "Liste",
+    "nom": "Nom",
+    "email": "Email",
+    "Données personnelles" : "Données personnelles",
+    "Username" : "Nom d'utilisateur",
+    "Télephone" : "Téléphone",
+    "Nouveau Mot de passe" : "Nouveau mot de passe",
+    "Confirmer votre Mot de passe" : "Confirmez votre mot de passe",
+    "Mot de passe" : "Mot de passe",
+    "prenom": "Prenom",
+    "Changer": "Changer",
+	
+	"actionPermission": {
+    "reference": "Référence",
+    "libelle": "Libellé",
+    "actionPermission": "Permission d'action",
+    "tabPan": "Permission d'action",
+    "header": "Liste des permissions d'action",
+    "deleteActionPermissionConfirmationMessage": "Êtes-vous sûr de vouloir supprimer la permission d'action",
+    "deleteActionPermissionsConfirmationMessage": "Êtes-vous sûr de vouloir supprimer les éléments sélectionnés"
+},
+
+"modelPermissionUser": {
+    "actionPermission": "Permission d'action",
+    "actionPermissionPlaceHolder": "Sélectionner une permission d'action",
+    "actionPermissionPlaceHolderFilter": "Rechercher par permission d'action",
+    "modelPermission": "Permission du modèle",
+    "modelPermissionPlaceHolder": "Sélectionner une permission de modèle",
+    "modelPermissionPlaceHolderFilter": "Rechercher par permission de modèle",
+    "value": "Valeur",
+    "user": "Utilisateur",
+    "userPlaceHolder": "Sélectionner un utilisateur",
+    "userPlaceHolderFilter": "Rechercher par utilisateur",
+    "subAttribute": "Sous-attribut",
+    "modelPermissionUser": "Permission du modèle de l'utilisateur",
+    "tabPan": "Permission du modèle de l'utilisateur",
+    "header": "Liste des permissions du modèle de l'utilisateur",
+    "deleteModelPermissionUserConfirmationMessage": "Êtes-vous sûr de vouloir supprimer la permission du modèle de l'utilisateur",
+    "deleteModelPermissionUsersConfirmationMessage": "Êtes-vous sûr de vouloir supprimer les éléments sélectionnés"
+},
+"role": {
+    "authority": "Autorité",
+    "role": "Rôle",
+    "tabPan": "Rôle",
+    "header": "Liste des rôles",
+    "deleteRoleConfirmationMessage": "Êtes-vous sûr de vouloir supprimer le rôle",
+    "deleteRolesConfirmationMessage": "Êtes-vous sûr de vouloir supprimer les éléments sélectionnés"
+},
+"roleUser": {
+    "role": "Rôle",
+    "rolePlaceHolder": "Sélectionner un rôle",
+    "rolePlaceHolderFilter": "Rechercher par rôle",
+    "user": "Utilisateur",
+    "userPlaceHolder": "Sélectionner un utilisateur",
+    "userPlaceHolderFilter": "Rechercher par utilisateur",
+    "roleUser": "Utilisateur de rôle",
+    "tabPan": "Utilisateur de rôle",
+    "header": "Liste des utilisateurs de rôle",
+    "deleteRoleUserConfirmationMessage": "Êtes-vous sûr de vouloir supprimer l'utilisateur de rôle",
+    "deleteRoleUsersConfirmationMessage": "Êtes-vous sûr de vouloir supprimer les éléments sélectionnés"
+},
+"user": {
+    "credentialsNonExpired": "Credentials non expirés",
+    "enabled": "Activé",
+    "email": "Email",
+    "accountNonExpired": "Compte non expiré",
+    "accountNonLocked": "Compte non verrouillé",
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "passwordChanged": "Mot de passe changé",
+    "modelPermissionUsers": "Utilisateurs de permission du modèle",
+    "roleUsers": "Utilisateurs de rôle",
+    "RoleUsersPlaceHolder": "Sélectionner plusieurs rôles",
+    "user": "Utilisateur",
+    "tabPan": "Utilisateur",
+    "header": "Liste des utilisateurs",
+    "deleteUserConfirmationMessage": "Êtes-vous sûr de vouloir supprimer l'utilisateur",
+    "deleteUsersConfirmationMessage": "Êtes-vous sûr de vouloir supprimer les éléments sélectionnés"
+},
+"modelPermission": {
+    "reference": "Référence",
+    "libelle": "Libellé",
+    "modelPermission": "Permission du modèle",
+    "tabPan": "Permission du modèle",
+    "header": "Liste des permissions du modèle",
+    "deleteModelPermissionConfirmationMessage": "Êtes-vous sûr de vouloir supprimer la permission du modèle",
+    "deleteModelPermissionsConfirmationMessage": "Êtes-vous sûr de vouloir supprimer les éléments sélectionnés"
+},
+
+
+    "notificationDetail":{
+        "utilisateur": "Utilisateur",
+        "utilisateurPlaceHolder": "Select a Utilisateur",
+        "utilisateurPlaceHolderFilter": "Search by Utilisateur",
+        "notification": "Notification",
+        "notificationPlaceHolder": "Select a Notification",
+        "notificationPlaceHolderFilter": "Search by Notification",
+        "notificationDetail": "Notification detail",
+        "tabPan": "Notification detail",
+        "header": "Liste des notification details",
+        "deleteNotificationDetailConfirmationMessage": "Are you sure you want to delete notification detail",
+        "deleteNotificationDetailsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "tacheEntiteExterne":{
+        "entiteExterne": "Entite externe",
+        "entiteExternePlaceHolder": "Select a Entite externe",
+        "entiteExternePlaceHolderFilter": "Search by Entite externe",
+        "tache": "Tache",
+        "tachePlaceHolder": "Select a Tache",
+        "tachePlaceHolderFilter": "Search by Tache",
+        "tacheEntiteExterne": "Tache entite externe",
+        "tabPan": "Tache entite externe",
+        "header": "Liste des tache entite externes",
+        "deleteTacheEntiteExterneConfirmationMessage": "Are you sure you want to delete tache entite externe",
+        "deleteTacheEntiteExternesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "utilisateur":{
+        "description": "Description",
+        "credentialsNonExpired": "Credentials non expired",
+        "enabled": "Enabled",
+        "accountNonExpired": "Account non expired",
+        "accountNonLocked": "Account non locked",
+        "passwordChanged": "Password changed",
+        "username": "Username",
+        "password": "Password",
+        "utilisateur": "Utilisateur",
+        "tabPan": "Utilisateur",
+        "header": "Liste des utilisateurs",
+        "deleteUtilisateurConfirmationMessage": "Are you sure you want to delete utilisateur",
+        "deleteUtilisateursConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "typeIdentite":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "typeIdentite": "Type identite",
+        "tabPan": "Type identite",
+        "header": "Liste des type identites",
+        "deleteTypeIdentiteConfirmationMessage": "Are you sure you want to delete type identite",
+        "deleteTypeIdentitesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "typeEntiteExterne":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "typeEntiteExterne": "Type entite externe",
+        "tabPan": "Type entite externe",
+        "header": "Liste des type entite externes",
+        "deleteTypeEntiteExterneConfirmationMessage": "Are you sure you want to delete type entite externe",
+        "deleteTypeEntiteExternesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "priorite":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "priorite": "Priorite",
+        "tabPan": "Priorite",
+        "header": "Liste des priorites",
+        "deletePrioriteConfirmationMessage": "Are you sure you want to delete priorite",
+        "deletePrioritesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "dossierClient":{
+        "nom": "Nom",
+        "adresse": "Adresse",
+        "nationalite": "Nationalite",
+        "nationalitePlaceHolder": "Select a Nationalite",
+        "nationalitePlaceHolderFilter": "Search by Nationalite",
+        "typeIdentite": "Type identite",
+        "typeIdentitePlaceHolder": "Select a Type identite",
+        "typeIdentitePlaceHolderFilter": "Search by Type identite",
+        "numeroIdentite": "Numero identite",
+        "raisonSociale": "Raison sociale",
+        "identifiantCommun": "Identifiant commun",
+        "registreCommerce": "Registre commerce",
+        "taxeProfessionnelle": "Taxe professionnelle",
+        "cnss": "Cnss",
+        "banqueAdherente": "Banque adherente",
+        "banqueAdherentePlaceHolder": "Select a Banque adherente",
+        "banqueAdherentePlaceHolderFilter": "Search by Banque adherente",
+        "groupeSociete": "Groupe societe",
+        "dossierClient": "Dossier client",
+        "tabPan": "Dossier client",
+        "header": "Liste des dossier clients",
+        "deleteDossierClientConfirmationMessage": "Are you sure you want to delete dossier client",
+        "deleteDossierClientsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "societe":{
+        "nom": "Nom",
+        "type": "Type",
+        "typePlaceHolder": "Select a Type",
+        "typePlaceHolderFilter": "Search by Type",
+        "dateCreation": "Date creation",
+        "dateCreationMin": "Date creation Min",
+        "dateCreationMax": "Date creation Max",
+        "rc": "Rc",
+        "taxeProfessionnelle": "Taxe professionnelle",
+        "ice": "Ice",
+        "gerant": "Gerant",
+        "associes": "Associes",
+        "societe": "Societe",
+        "tabPan": "Societe",
+        "header": "Liste des societes",
+        "deleteSocieteConfirmationMessage": "Are you sure you want to delete societe",
+        "deleteSocietesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "notification":{
+        "notificationDetails": "Notification details",
+        "NotificationDetailsPlaceHolder": "Select multiple Utilisateurs",
+        "contenue": "Contenue",
+        "dateEnvoi": "Date envoi",
+        "dateEnvoiMin": "Date envoi Min",
+        "dateEnvoiMax": "Date envoi Max",
+        "notification": "Notification",
+        "tabPan": "Notification",
+        "header": "Liste des notifications",
+        "deleteNotificationConfirmationMessage": "Are you sure you want to delete notification",
+        "deleteNotificationsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "roleAssocie":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "roleAssocie": "Role associe",
+        "tabPan": "Role associe",
+        "header": "Liste des role associes",
+        "deleteRoleAssocieConfirmationMessage": "Are you sure you want to delete role associe",
+        "deleteRoleAssociesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "banque":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "banque": "Banque",
+        "tabPan": "Banque",
+        "header": "Liste des banques",
+        "deleteBanqueConfirmationMessage": "Are you sure you want to delete banque",
+        "deleteBanquesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "etatAvancement":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "etatAvancement": "Etat avancement",
+        "tabPan": "Etat avancement",
+        "header": "Liste des etat avancements",
+        "deleteEtatAvancementConfirmationMessage": "Are you sure you want to delete etat avancement",
+        "deleteEtatAvancementsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "entiteExterne":{
+        "nom": "Nom",
+        "email": "Email",
+        "tel": "Tel",
+        "typeEntiteExterne": "Type entite externe",
+        "typeEntiteExternePlaceHolder": "Select a Type entite externe",
+        "typeEntiteExternePlaceHolderFilter": "Search by Type entite externe",
+        "entiteExterne": "Entite externe",
+        "tabPan": "Entite externe",
+        "header": "Liste des entite externes",
+        "deleteEntiteExterneConfirmationMessage": "Are you sure you want to delete entite externe",
+        "deleteEntiteExternesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "associe":{
+        "nom": "Nom",
+        "societe": "Societe",
+        "societePlaceHolder": "Select a Societe",
+        "societePlaceHolderFilter": "Search by Societe",
+        "roleAssocie": "Role associe",
+        "roleAssociePlaceHolder": "Select a Role associe",
+        "roleAssociePlaceHolderFilter": "Search by Role associe",
+        "associe": "Associe",
+        "tabPan": "Associe",
+        "header": "Liste des associes",
+        "deleteAssocieConfirmationMessage": "Are you sure you want to delete associe",
+        "deleteAssociesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "tacheDetail":{
+        "description": "Description",
+        "utilisateur": "Utilisateur",
+        "utilisateurPlaceHolder": "Select a Utilisateur",
+        "utilisateurPlaceHolderFilter": "Search by Utilisateur",
+        "etatAvancement": "Etat avancement",
+        "etatAvancementPlaceHolder": "Select a Etat avancement",
+        "etatAvancementPlaceHolderFilter": "Search by Etat avancement",
+        "tache": "Tache",
+        "tachePlaceHolder": "Select a Tache",
+        "tachePlaceHolderFilter": "Search by Tache",
+        "tacheDetail": "Tache detail",
+        "tabPan": "Tache detail",
+        "header": "Liste des tache details",
+        "deleteTacheDetailConfirmationMessage": "Are you sure you want to delete tache detail",
+        "deleteTacheDetailsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "typeSociete":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "typeSociete": "Type societe",
+        "tabPan": "Type societe",
+        "header": "Liste des type societes",
+        "deleteTypeSocieteConfirmationMessage": "Are you sure you want to delete type societe",
+        "deleteTypeSocietesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "tache":{
+        "description": "Description",
+        "dateLimite": "Date limite",
+        "dateLimiteMin": "Date limite Min",
+        "dateLimiteMax": "Date limite Max",
+        "priorite": "Priorite",
+        "prioritePlaceHolder": "Select a Priorite",
+        "prioritePlaceHolderFilter": "Search by Priorite",
+        "etatAvancement": "Etat avancement",
+        "etatAvancementPlaceHolder": "Select a Etat avancement",
+        "etatAvancementPlaceHolderFilter": "Search by Etat avancement",
+        "dossierClient": "Dossier client",
+        "dossierClientPlaceHolder": "Select a Dossier client",
+        "dossierClientPlaceHolderFilter": "Search by Dossier client",
+        "tacheDetails": "Tache details",
+        "tacheEntiteExternes": "Tache entite externes",
+        "TacheEntiteExternesPlaceHolder": "Select multiple Entite externes",
+        "tache": "Tache",
+        "tabPan": "Tache",
+        "header": "Liste des taches",
+        "deleteTacheConfirmationMessage": "Are you sure you want to delete tache",
+        "deleteTachesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "nationalite":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "nationalite": "Nationalite",
+        "tabPan": "Nationalite",
+        "header": "Liste des nationalites",
+        "deleteNationaliteConfirmationMessage": "Are you sure you want to delete nationalite",
+        "deleteNationalitesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+"appName": "GED"
+}
+
+
